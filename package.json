@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
+		"start-windows": "SET NODE_ENV=production && node server",
 		"start": "NODE_ENV=production node server",
 		"dev": "nodemon server"
 	},
