@@ -1,14 +1,16 @@
 const express = require('express');
 const dotenv = require('dotenv');
-
-// Middleware
 const morgan = require('morgan');
-
-// Routers
-const bootcamps = require('./routes/bootcamps');
+const { connectDb } = require('./config/db');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
+
+// Connect to database
+connectDb();
+
+// Routers
+const bootcamps = require('./routes/bootcamps');
 
 const app = express();
 
